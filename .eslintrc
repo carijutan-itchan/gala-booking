@@ -1,0 +1,76 @@
+{
+  "env": {
+    "browser": true,
+    "es2021": true,
+    "node": true
+  },
+  "extends": [
+    "eslint:recommended",
+    "plugin:react/recommended",
+    "plugin:@typescript-eslint/recommended",
+    "prettier", //Add prettier formatter
+    "plugin:compat/recommended"
+  ],
+  "settings": {
+    //https://github.com/amilajack/eslint-plugin-compat
+    "polyfills": [
+      // Example of API with no property (i.e. a function)
+      "fetch",
+      // Example of marking entire API and all methods and properties as polyfilled
+      "Promise"
+    ],
+    "import/resolver": {
+      "node": {
+        // we can only import / require with this file extentions
+        "extensions": [
+          ".ts",
+          ".tsx"
+        ]
+      }
+    },
+    "react": {
+      "version": "detect"
+    }
+  },
+  "overrides": [],
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "ecmaVersion": "latest",
+    "sourceType": "module"
+  },
+  "plugins": [
+    "react",
+    "react-hooks",
+    "@typescript-eslint",
+    "prettier",
+    "compat"
+  ],
+  "browserslist": [
+    "defaults"
+  ],
+  "rules": {
+    "react/react-in-jsx-scope": "off",
+    "react/jsx-uses-react": "off",
+    "spaced-comment": "error",
+    "quotes": [
+      "error",
+      "single"
+    ],
+    //Check if the import are duplicate
+    "no-duplicate-imports": "error",
+    //adds support for TypeScript variables that are declared and not used 
+    "@typescript-eslint/no-unused-vars": [
+      "error",
+      {
+        "vars": "all",
+        "args": "all",
+        "argsIgnorePattern": "^_"
+      }
+    ],
+    // react + react-hooks
+    "react/prop-types": "off", // Leave it to the typescript compiler
+    "react/no-deprecated": "error",
+    "react-hooks/rules-of-hooks": "error",
+    "react-hooks/exhaustive-deps": "error"
+  }
+}
