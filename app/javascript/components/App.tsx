@@ -1,12 +1,12 @@
-import React from 'react';
+import React, { FC, StrictMode } from 'react';
 import Header from '../shared/header/header';
-import '../styles/index.scss'
+import { AppRoutes } from '../routes';
+// import '../styles/index.scss'
 
-const App: React.FC = (): JSX.Element => {
-  return <div>
-    <Header />
-    <h1 className='text-3xl font-bold underline'> Jhon miss na kita Jhon  - JEPOY </h1>
-  </div>;
-};
+const App: FC = () => (
+  <StrictMode>
+    <AppRoutes />
+  </StrictMode>
+)
 
 export default App;
