@@ -2,6 +2,7 @@ import React, { FC } from 'react';
 import { Outlet } from 'react-router-dom';
 import Header from '../../shared/header/header';
 import { Helmet, HelmetProvider } from 'react-helmet-async';
+import SearchSection from '../../shared/sections/search/searchSection';
 
 const DefaultLayout: FC = () => {
   return (
@@ -10,10 +11,12 @@ const DefaultLayout: FC = () => {
         <Helmet>
           <title>Gala | Booking</title>
         </Helmet>
-        <div className='bg-white text-base text-neutral-900 dark:text-neutral-200'>
-          <Header />
-        </div>
       </HelmetProvider>
+      <div className='relative overflow-hidden '>
+        <div className='container relative'>
+          <SearchSection />
+        </div>
+      </div>
     </>
   );
 }
