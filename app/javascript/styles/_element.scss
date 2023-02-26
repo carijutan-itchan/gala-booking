@@ -2,6 +2,10 @@
   @apply py-3 px-4 md: py-4 md:px-7 xl:py-6 xl:px-10;
 }
 
+.gala-flex-1 {
+  flex: 1 0 0%;
+}
+
 .lg\:gala-flex-2 {
   flex: 2 1;
 }

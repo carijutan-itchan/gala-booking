@@ -1,9 +1,8 @@
 import React, { useEffect, useState } from "react";
 import LocationInput from "./LocationInput";
-// import GuestsInput, { GuestsInputProps } from "./GuestsInput";
 import { FocusedInputShape } from "react-dates";
 import GalaDatePicker from "./galaDatepickerForm";
-import ButtonPrimary from "../../../buttons/buttonPrimary";
+import GalaGuestsInput from "./galaGuestForm";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSearch } from "@fortawesome/free-solid-svg-icons";
 import moment from "moment";
@@ -56,7 +55,7 @@ const GalaSearchForm: FC<StaySearchFormProps> = ({
 
   const renderForm = () => {
     return (
-      <form className="w-full relative mt-8 flex rounded-full shadow-xl dark:shadow-2xl bg-white">
+      <form className="w-full relative mt-8 flex rounded-full shadow-xl dark:shadow-2xl bg-white items-center">
         <LocationInput
           defaultValue={locationInputValue}
           onChange={(e) => setLocationInputValue(e)}
@@ -68,16 +67,10 @@ const GalaSearchForm: FC<StaySearchFormProps> = ({
           onFocusChange={(focus) => setDateFocused(focus)}
           onChange={(data) => setDateRangeValue(data)}
         />
-        {/* <GuestsInput
+        <GalaGuestsInput
           defaultValue={guestValue}
           onChange={(data) => setGuestValue(data)}
-        /> */}
-        {/* BUTTON SUBMIT OF FORM */}
-        <div className="px-4 py-4 lg:py-0">
-          <button type="button" className="h-14 md:h-16 w-full md:w-16 rounded-full bg-indigo-600 hover:bg-indigo-700 flex items-center justify-center text-neutral-50 focus:outline-none">
-            <FontAwesomeIcon icon={faSearch} size="lg" />
-          </button>
-        </div>
+        />
       </form>
     );
   };
