@@ -1,9 +1,11 @@
 import React, { useEffect, useState } from "react";
 import LocationInput from "./LocationInput";
 // import GuestsInput, { GuestsInputProps } from "./GuestsInput";
-// import { FocusedInputShape } from "react-dates";
+import { FocusedInputShape } from "react-dates";
 import GalaDatePicker from "./galaDatepickerForm";
 import ButtonPrimary from "../../../buttons/buttonPrimary";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faSearch } from "@fortawesome/free-solid-svg-icons";
 import moment from "moment";
 import { FC } from "react";
 
@@ -62,9 +64,9 @@ const GalaSearchForm: FC<StaySearchFormProps> = ({
         />
         <GalaDatePicker
           defaultValue={dateRangeValue}
-        // defaultFocus={dateFocused}
-        // onFocusChange={(focus) => setDateFocused(focus)}
-        // onChange={(data) => setDateRangeValue(data)}
+          defaultFocus={dateFocused}
+          onFocusChange={(focus) => setDateFocused(focus)}
+          onChange={(data) => setDateRangeValue(data)}
         />
         {/* <GuestsInput
           defaultValue={guestValue}
@@ -72,7 +74,9 @@ const GalaSearchForm: FC<StaySearchFormProps> = ({
         /> */}
         {/* BUTTON SUBMIT OF FORM */}
         <div className="px-4 py-4 lg:py-0">
-          <ButtonPrimary buttonName="Search" />
+          <button type="button" className="h-14 md:h-16 w-full md:w-16 rounded-full bg-indigo-600 hover:bg-indigo-700 flex items-center justify-center text-neutral-50 focus:outline-none">
+            <FontAwesomeIcon icon={faSearch} size="lg" />
+          </button>
         </div>
       </form>
     );

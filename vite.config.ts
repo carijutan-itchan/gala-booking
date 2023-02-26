@@ -5,4 +5,7 @@ export default defineConfig({
   plugins: [
     RubyPlugin(),
   ],
+  define: {
+    global: 'window'
+  }
 })
