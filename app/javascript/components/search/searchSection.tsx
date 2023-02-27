@@ -1,6 +1,6 @@
 import React, { FC, ReactNode } from "react";
 // @ts-ignore
-import bgImg from "../../../../assets/images/bg_section1.png"
+import bgImg from "../../../assets/images/bg_section1.png"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faMapLocationDot, faHouse } from '@fortawesome/free-solid-svg-icons'
 import SearchField from "./searchField";

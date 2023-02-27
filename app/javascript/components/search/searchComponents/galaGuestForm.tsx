@@ -1,7 +1,7 @@
 
 import React, { Fragment, useEffect, useRef, useState } from "react";
 import { Popover, Transition } from "@headlessui/react";
-import GalaInputNumber from "../../../inputNumber/galaInputNumber";
+import GalaInputNumber from "../../../shared/inputNumber/galaInputNumber";
 import { FC } from "react";
 import ClearDataButton from "./ClearDataButton";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";

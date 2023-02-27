@@ -8,7 +8,7 @@ import {
 import { DateRage } from "./galaSearchForm";
 import { FC } from "react";
 import ClearDataButton from "./ClearDataButton";
-import useWindowSize from "../../../../hooks/useWindowResize";
+import useWindowSize from "../../../hooks/useWindowResize";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCalendar } from "@fortawesome/free-regular-svg-icons";
 
