@@ -6,7 +6,7 @@ const Header: FC = () => {
     <div className="nc-Header sticky top-0 w-full left-0 right-0 z-40 nc-header-bg shadow-sm backdrop-blur-2xl bg-white/60">
       <div className="nc-MainNav1 relative z-10 backdrop-filter" >
         <div className="container py-5 relative flex justify-between items-center space-x-4 xl:space-x-8">
-          <div className="flex justify-start flex-grow items-center space-x-4 sm:space-x-10 2xl:space-x-14">
+          <div className="flex justify-start flex-grow items-center space-x-4 sm:space-x-10 2xl:space-x-14 text-neutral-700">
             <h1>Log here</h1>
             <h1>Navigation here</h1>
           </div>

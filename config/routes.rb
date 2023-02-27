@@ -3,4 +3,9 @@ Rails.application.routes.draw do
 
   # Defines the root path route ("/")
   root "root#index"
+
+  # Non-existent GET routing that occurs during normal browsing is handled on the front-end side
+  get '*path', to: 'root#index', constraints: lambda { |request|
+    !request.xhr? && request.format.html?
+  }
 end

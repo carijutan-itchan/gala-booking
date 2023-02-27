@@ -8,6 +8,8 @@ import React, {
 
 import checkInViewIntersectionObserver from "../intersectionViewer"
 // @ts-ignore
+import placeholderLarge from "../../../assets/images//placeholder-large.png";
+// @ts-ignore
 import placeholderLargeH from "../../../assets/images//placeholder-large-h.png";
 
 export interface NcImageProps extends ImgHTMLAttributes<HTMLImageElement> {
@@ -26,13 +28,10 @@ const ImagePlaceholder: FC<NcImageProps> = ({
   let isMounted = false;
   const _containerRef = useRef(null);
   let _imageEl: HTMLImageElement | null = null;
-  console.log("test");
-  console.log(prevImageHorizontal);
 
-
-  const placeholderImage = placeholderLargeH
-  // ? placeholderLargeH
-  // : placeholderLarge;
+  const placeholderImage = prevImageHorizontal
+    ? placeholderLargeH
+    : placeholderLarge;
 
   const [__src, set__src] = useState(placeholderImage);
 

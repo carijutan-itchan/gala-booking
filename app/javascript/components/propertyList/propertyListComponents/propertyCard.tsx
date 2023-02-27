@@ -61,7 +61,7 @@ const PropertyListCard: FC<StayCardProps> = ({
               className={` font-medium capitalize ${size === "default" ? "text-lg" : "text-base"
                 }`}
             >
-              <span className="line-clamp-1">{title}</span>
+              <p className="line-clamp-1">{title}</p>
             </h2>
           </div>
           <div className="flex items-center text-neutral-800 text-sm space-x-2">
