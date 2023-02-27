@@ -7,7 +7,7 @@ import React, {
 } from "react";
 
 import checkInViewIntersectionObserver from "../intersectionViewer"
-// import placeholderLarge from "../../../assets/images//placeholder-large.png"
+// @ts-ignore
 import placeholderLargeH from "../../../assets/images//placeholder-large-h.png";
 
 export interface NcImageProps extends ImgHTMLAttributes<HTMLImageElement> {
